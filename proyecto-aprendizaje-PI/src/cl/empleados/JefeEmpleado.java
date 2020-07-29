@@ -2,11 +2,11 @@ package cl.empleados;
 
 public class JefeEmpleado implements IEmpleado {
 	
-	private ICreacionInformes nuevoInforme;
+	private IUsableInformes nuevoInforme;
 	
 	
 	
-	public JefeEmpleado(ICreacionInformes nuevoInforme) {
+	public JefeEmpleado(IUsableInformes nuevoInforme) {
 		this.nuevoInforme = nuevoInforme;
 	}
 

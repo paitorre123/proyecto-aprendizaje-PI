@@ -1,6 +1,6 @@
 package cl.empleados;
 
-public class Informe implements ICreacionInformes {
+public class Informe implements IUsableInformes {
 
 	@Override
 	public String getInforme() {

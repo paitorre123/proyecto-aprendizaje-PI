@@ -2,10 +2,10 @@ package cl.empleados;
 
 public class DirectorEmpleado  implements IEmpleado{
 	
-	private ICreacionInformes informeNuevo;
+	private IUsableInformes informeNuevo;
 	
 	//Dependencia del informe
-	public DirectorEmpleado(ICreacionInformes informeNuevo) {
+	public DirectorEmpleado(IUsableInformes informeNuevo) {
 		this.informeNuevo = informeNuevo;
 	}
 	

@@ -1,6 +1,6 @@
 package cl.empleados;
 
-public interface ICreacionInformes {
+public interface IUsableInformes {
 	
 	public String getInforme();
 }
