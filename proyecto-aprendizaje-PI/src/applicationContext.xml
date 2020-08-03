@@ -20,7 +20,13 @@
 	<property name="nombreEmpresa" value="${nombreEmpresa}"></property>
 </bean>
 
-<bean id="miSecretarioEmpleado" class="cl.empleados.SecretarioEmpleado" >
+<bean id="miSecretarioEmpleadoSingleton" class="cl.empleados.SecretarioEmpleado"  scope="singleton">
+	<property name="informeNuevo" ref="miInforme"></property>
+	<property name="email" value="${emailSecretariado}"></property>
+	<property name="nombreEmpresa" value="${nombreEmpresa}"></property>
+</bean>
+
+<bean id="miSecretarioEmpleadoPrototype" class="cl.empleados.SecretarioEmpleado"  scope="prototype">
 	<property name="informeNuevo" ref="miInforme"></property>
 	<property name="email" value="${emailSecretariado}"></property>
 	<property name="nombreEmpresa" value="${nombreEmpresa}"></property>
