@@ -18,13 +18,13 @@ public class UsoEmpleado {
 //		System.out.println(e1.getEmail());
 //		System.out.println("Empresa: "+e1.getNombreEmpresa());
 		
-		System.out.println("\n");
-		
-		System.out.println("EMPLEADO SECRETARIO 1: "+ se1);
-		
-		System.out.println("\n");
-		
-		System.out.println("EMPLEADO SECRETARIO 2: "+ se2);
+//		System.out.println("\n");
+//		
+//		System.out.println("EMPLEADO SECRETARIO 1: "+ se1);
+//		
+//		System.out.println("\n");
+//		
+//		System.out.println("EMPLEADO SECRETARIO 2: "+ se2);
 //		System.out.println(se1.getTarea());
 //		System.out.println(se1.getInformes());
 //		System.out.println(se1.getEmail());

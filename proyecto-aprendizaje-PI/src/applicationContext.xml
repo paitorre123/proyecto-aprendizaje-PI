@@ -9,23 +9,30 @@
     http://www.springframework.org/schema/context/spring-context-3.1.xsd
 ">
 
+<!-- lectura de archivo externo ${nombre-dato} -->
 <context:property-placeholder location="classpath:datosEmpresa.propiedades"/>
 
 <!-- creacion de la dependencia -->
 <bean id="miInforme" class="cl.empleados.Informe"></bean>
 
-<bean id="miEmpleado" class="cl.empleados.DirectorEmpleado">
+<!-- componente miEmpleado -->
+<bean id="miEmpleado" class="cl.empleados.DirectorEmpleado" 
+	  init-method="metodoInicial" destroy-method="metodoFinal">
 	<constructor-arg ref="miInforme"></constructor-arg>
 	<property name="email" value="${emailDirectivo}"></property>
 	<property name="nombreEmpresa" value="${nombreEmpresa}"></property>
 </bean>
 
+<!-- componente miSecretarioEmpleadoSingleton -->
+<!--  singleton se genera un solo componente para todas las instancias -->
 <bean id="miSecretarioEmpleadoSingleton" class="cl.empleados.SecretarioEmpleado"  scope="singleton">
 	<property name="informeNuevo" ref="miInforme"></property>
 	<property name="email" value="${emailSecretariado}"></property>
 	<property name="nombreEmpresa" value="${nombreEmpresa}"></property>
 </bean>
 
+<!-- componente miSecretarioEmpleadoPrototype -->
+<!-- prototype se genera un componente por instancia -->
 <bean id="miSecretarioEmpleadoPrototype" class="cl.empleados.SecretarioEmpleado"  scope="prototype">
 	<property name="informeNuevo" ref="miInforme"></property>
 	<property name="email" value="${emailSecretariado}"></property>
